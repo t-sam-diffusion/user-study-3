@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Selection Survey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Title and Description -->
+    <header class="game-header">
+      <h1>Image Selection Survey</h1>
+      <p class="description">
+        Welcome to the Image Selection Survey! Enter your name to start!
+      </p>
+    </header>
+    <style>
+      .instructions-container {
+        width: 60%;
+        margin: 0 auto; /* Centers the block */
+        text-align: left; /* Centers text inside */
+      }
+    </style>
+    <!-- Main Content -->
+    <div class="game-body">
+      <!-- Left Section: Name Input or Images -->
+      <section class="game-area">
+        <!-- Name Input Section -->
+        <div class="instructions-container">
+          <p><strong>Instructions:</strong> On each slide, click on the image that best matches the given text. If both images equally represent the text, press the TIE button. Be sure to save your results at the end. You can return later and resume where you left off!</p>
+        </div> <div id="name-input-section">
+          <input type="text" id="name-input" placeholder="Enter your name" />
+          <button id="start-button">Start Survey</button>
+        </div>
+
+        <!-- Image Selection Section -->
+        <div id="image-selection" style="display: none;">
+          <div id="image-container"></div>
+          <p id="prompt" class="prompt"></p>
+          <!-- Counter for steps -->
+          <p id="step-counter" class="step-counter">Step: 0/80</p>
+        </div>
+      </section>
+
+      <!-- Right Section: Leaderboard -->
+      <!-- <aside class="leaderboard">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list"></ul>
+      </aside> -->
+    </div>
+  </div>
+
+  <!-- Save Button (Initially hidden) -->
+  <button id="save-button" class="save-button" style="display: none;">Save Choices</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

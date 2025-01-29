@@ -1,0 +1,226 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header.game-header {
+  text-align: center;
+  padding: 20px;
+  background-color: #4caf50;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header.game-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header.game-header .description {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #e0f7e7;
+}
+
+.game-body {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+}
+
+.game-area {
+  flex: 2;
+  text-align: center;
+}
+
+#name-input-section {
+  margin-top: 50px;
+}
+
+#name-input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 50%;
+  margin-right: 10px;
+}
+
+#start-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#start-button:hover {
+  background-color: #45a049;
+}
+
+#image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: row;
+  flex-wrap: 'wrap';
+}
+
+#image-container img {
+  width: 250px;
+  margin: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+#image-container img:hover {
+  transform: scale(1.1);
+  border-color: #4caf50;
+}
+
+.prompt {
+  width: 100%;  /* Make prompt take up full width */
+  margin-top: 10px;  /* Optional: space between images and the prompt */
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+aside.leaderboard {
+  flex: 1;
+  padding-left: 20px;
+  border-left: 1px solid #ddd;
+}
+
+aside.leaderboard h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+aside.leaderboard ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside.leaderboard ul li {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* Style for the container that holds the entire triplet */
+.triplet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Optional: space between each triplet */
+}
+
+/* Style for the images container to align images horizontally */
+.images-container {
+  display: flex;
+  gap: 10px; /* Space between images */
+  margin-bottom: 10px; /* Space between images and the prompt */
+}
+
+/* Style for the individual images */
+.images-container img {
+  width: 100px; /* Set image size */
+  height: auto;
+  cursor: pointer;
+}
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%); /* Center the message horizontally and vertically */
+  padding: 20px 40px; /* Larger padding for prominence */
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+  color: white; /* White text */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center the text inside */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  cursor: pointer; /* Optional: make it feel interactive like a button */
+  z-index: 9999; /* Ensure it appears above other content */
+}
+
+/* Style for the prompt text */
+.prompt {
+  text-align: center;
+  margin-bottom: 10px; /* Space between prompt and save button */
+}
+
+/* Style for the Save button */
+.save-button {
+  position: fixed;
+  bottom: 20px;  /* Space from the bottom of the page */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  padding: 12px 24px; /* Slightly larger padding for a more prominent button */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Ensure text is readable */
+  font-weight: bold; /* Bold text for emphasis */
+  /* transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; Smooth transition effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: 'block'; /* Subtle shadow for depth */
+}
+.thank-you-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the message */
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+  color: white; /* White text */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center the text inside */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  z-index: 9999; /* Ensure it appears above other content */
+}
+
+.tie-button {
+  position: fixed;
+  bottom: 100px;  /* Adjust to place it above the Save button */
+  left: 50%;
+  transform: translateX(-50%);  /* Center horizontally */
+  padding: 12px 24px;  /* Same padding as save button */
+  background-color: #4CAF50;  /* Green background */
+  color: white;  /* White text */
+  border: none;  /* Remove default border */
+  border-radius: 8px;  /* Rounded corners for a softer look */
+  cursor: pointer;  /* Pointer cursor on hover */
+  font-size: 16px;  /* Ensure text is readable */
+  font-weight: bold;  /* Bold text for emphasis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+/* Hover effect for the Save button */
+.save-button:hover {
+  background-color: #45a049; /* Darker green when hovered */
+  /* transform: scale(1.05); Slightly enlarge the button for a dynamic feel */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  /* Darker shadow on hover */
+}
+
+/* Active effect when button is clicked */
+/* .save-button:active {
+  background-color: #3e8e41; /* Even darker green when clicked */
+  /* transform: scale(1.02); Slightly reduce the scale for the clicked effect */
+
